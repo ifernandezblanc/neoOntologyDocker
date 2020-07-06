@@ -1,0 +1,17 @@
+version: ""
+
+services:
+
+  server:
+    image:
+    build:
+      context:
+      args:
+    ports:
+
+  store:
+    image:
+      build:
+        context:
+        args:
+      ports:
