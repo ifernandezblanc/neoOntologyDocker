@@ -7,13 +7,13 @@ services:
     build:
       context: ./server
     volumes:
-      - ./data/server/assets:/server/assets
+      - ./assets:/server/assets
     ports:
       - "3003:3003"
 
   store:
-    container_name: neoontology-store
-    image: neo4j:3.5.17
+    container_name: neoontologydocker_store_1
+    image: neo4j:3.5
     depends_on:
       - server
     ports:
@@ -22,17 +22,3 @@ services:
     environment:
       - NEO4JLABS_PLUGINS=["apoc", "n10s"]
       - NEO4J_AUTH=neo4j/opexcellence
-      - NEO4J_HOME=/var/lib/neo4j
-      - NEO4J_dbms_unmanaged__extension__classes=semantics.extension=/rdf
-      - NEO4J_dbms_security_procedures_whitelist=apoc.coll.*,apoc.load.*,semantics.*
-      - NEO4J_dbms_security_procedures_unrestricted=apoc.*,semantics.*
-      - NEO4J_apoc_export_file_enabled=true
-      - NEO4J_apoc_import_file_enabled=true
-      - NEO4J_apoc_import_file_use__neo4j__config=true
-    volumes:
-      - ./data/store/neo4j/data:/var/lib/neo4j/data
-      - ./data/store/neo4j/import:/var/lib/neo4j/import
-      - ./data/store/neo4j/conf:/var/lib/neo4j/conf
-      - ./data/store/neo4j/logs:/var/lib/neo4j/logs
-      - ./data/store/neo4j/plugins:/var/lib/neo4j/plugins
-      - ./data/store/neo4j/rdf:/var/lib/neo4j/rdf

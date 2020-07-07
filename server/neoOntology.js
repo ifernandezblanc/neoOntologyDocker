@@ -96,7 +96,7 @@ app.use(favicon(path.join(__dirname,'assets','favicon.ico')));
 // B. Database driver initialisation (neo4j)
 /*====================================================================================================================*/
 // Declare route to neo4j server
-const driver = neo4j.driver('bolt://localhost', neo4j.auth.basic('neo4j','opexcellence'));
+const driver = neo4j.driver('bolt://host.docker.internal', neo4j.auth.basic('neo4j','opexcellence'));
 // const driver = neo4j.driver('neo4j://localhost', neo4j.auth.basic('neo4j', 'neo4j'));
 // Instantiate connection to neo4j server
 let session = driver.session();
