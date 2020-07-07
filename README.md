@@ -6,7 +6,7 @@ This version is a docker-composed project to use neoOntology using docker images
 
 For more information, please contact inigofernandezdelamo@outlook.com
 
-![alt text](https://github.com/InigoGregorio/neoOntologyDocker/blob/master/data/server/assets/files/png/Logo-neoOntologyDocker.png)
+![alt text](https://github.com/InigoGregorio/neoOntologyDocker/blob/master/assets/files/png/Logo-neoOntologyDocker.png)
 
 ### Running and exiting neoOntologyDocker
 
